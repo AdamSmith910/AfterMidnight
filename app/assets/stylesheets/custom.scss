@@ -1,0 +1,135 @@
+.navbar {
+	background-color: blue;
+	color: white;
+	font-size: 1.2em;
+}
+
+footer {
+	background-color: blue;
+	border-top: 1px solid #eaeaea;
+	bottom: 0;
+	height: 60px;
+	padding: 15px;
+	position: relative;
+	width: 100%;
+
+	a {
+		color: #894355;
+		font-size: 1.3em;
+		margin-right: 15px;
+	}
+
+	&:hover {
+		color: #222;
+	}
+
+	small {
+		float: left;
+		font-size: 0.9em;
+	}
+
+	ul {
+		float: right;
+		text-decoration: underline;
+
+		li {
+			float: left;
+			margin-left: 15px;
+		}
+	}
+}
+
+h1 {
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+#title {
+	background-color: #58B6E6;
+	font-weight: bold;
+	margin: 16px 0;
+	padding: 10px;
+	width: 100%;
+}
+
+h3 {
+	font-weight: bold;
+	text-align: center;
+}
+
+.main-body {
+	margin-top: 60px;
+	margin-bottom: 100px;
+	min-height: 70vh;
+}
+
+#signup {
+	text-align: center;
+}
+
+.flash-error {
+	color: red;
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: 1em;
+	text-align: center;
+}
+
+.flash-alert {
+	color: green;
+	text-align: center;
+	font-size: 18px;
+	margin-top: 1em;
+}
+
+.flash-notice {
+	color: orange;
+	font-size: 18px;
+	margin-top: 1em;
+	text-align: center;
+}
+
+.flash-success {
+	text-align: center;
+	color: blue;
+	font-size: 18px;
+	margin-top: 1em;
+}
+
+.btn {
+	color: gray;
+	text-align: center;
+}
+
+.logo {
+	text-align: center;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.brand {
+	margin-right: 10px;
+	padding-bottom: -10px;
+	margin-bottom: -10px;
+}
+
+td {
+  background-color: rgba(255, 255, 255, .5);
+}
+
+th {
+  text-align: center;
+}
+
+.about {
+  background-color: #e3e3e3;
+  border: 2px solid #6699ff;
+  border-radius: 20px;
+  margin-bottom: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 20px;
+  padding: 50px;
+  width: 600px;
+}
