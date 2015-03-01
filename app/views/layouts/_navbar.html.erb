@@ -1,0 +1,26 @@
+<%= nav_bar fixed: :top, responsive: true do %>
+	<div id="nav-row">
+		<%= menu_group inline: true do %>
+			<%= menu_item image_tag("logo5.png", size: "45x45", id: "brand"), root_path %></a>
+			<%= menu_item "After Midnight", root_path, id: "site-name" %>
+		<% end %>
+	
+		<%= menu_group pull: :right do %>
+			<% if current_user.nil? %>
+				<%= menu_item "Sign up", new_user_path, id: "menu-signup" %>
+				<% menu_item do %>
+					<%= form_for :session, url: login_path, html: {class: "navbar-form pull-right"} do %>
+						<%= f.text_field :username, placeholder: "username" %>
+						<%= f.password_field :password, placeholder: "password" %>
+						<%= f.submit "Login" %>
+					<% end %>
+				<% end %>
+			<% else %>
+				<%= menu_item "Logout", logout_path, id: "logout" %>
+			<% end %>
+		<% end %>
+	</div>
+<% end %>
+
+
+
