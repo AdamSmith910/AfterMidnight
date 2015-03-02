@@ -7,9 +7,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:success] = "User created"
+      redirect_to root_path
     else
       flash[:alert] = "Failed to create new user"
-      redirect_to new_users_path
+      redirect_to new_user_path
     end
   end
 

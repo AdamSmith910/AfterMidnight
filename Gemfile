@@ -15,6 +15,7 @@ gem "twitter-bootstrap-rails",  '~> 3.2.0'
 gem 'bootstrap_form',           '~> 2.2.0'
 gem "therubyracer",             '~> 0.12.1'
 gem "less-rails",               '~> 2.6.0'
+gem 'bcrypt',                   '~> 3.1.7'
 
 
 group :development, :test do
