@@ -1,52 +1,15 @@
 .navbar {
-	background-color: blue;
-	color: white;
+	background-color: black;
+	text-color: white;
 	font-size: 1.2em;
-}
-
-footer {
-	background-color: blue;
-	border-top: 1px solid #eaeaea;
-	bottom: 0;
-	height: 60px;
-	padding: 15px;
-	position: relative;
-	width: 100%;
-
-	a {
-		color: #894355;
-		font-size: 1.3em;
-		margin-right: 15px;
-	}
-
-	&:hover {
-		color: #222;
-	}
-
-	small {
-		float: left;
-		font-size: 0.9em;
-	}
-
-	ul {
-		float: right;
-		text-decoration: underline;
-
-		li {
-			float: left;
-			margin-left: 15px;
-		}
-	}
 }
 
 h1 {
 	font-weight: bold;
 	text-align: center;
-	margin-bottom: 40px;
 }
 
 #title {
-	background-color: #58B6E6;
 	font-weight: bold;
 	margin: 16px 0;
 	padding: 10px;
@@ -58,8 +21,8 @@ h3 {
 	text-align: center;
 }
 
-.main-body {
-	margin-top: 60px;
+.main-body-container {
+	margin-top: 100px;
 	margin-bottom: 100px;
 	min-height: 70vh;
 }
@@ -132,4 +95,33 @@ th {
   min-height: 20px;
   padding: 50px;
   width: 600px;
+}
+
+footer {
+	background-color: black;
+	border-top: 1px solid #eaeaea;
+	bottom: 0;
+	height: 60px;
+	padding: 15px;
+	position: relative;
+	width: 100%;
+
+	a {
+		color: white;
+		font-size: 1.3em;
+		margin-right: 15px;
+	}
+
+	small {
+		background-color: white;
+		text-color: white;
+		float: left;
+		font-size: 1.2em;
+		font-weight: bold;
+	}
+
+	ul {
+		float: right;
+		text-decoration: underline;
+	}
 }

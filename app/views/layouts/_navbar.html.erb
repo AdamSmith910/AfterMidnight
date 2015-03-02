@@ -6,10 +6,10 @@
 		<% end %>
 	
 		<%= menu_group pull: :right do %>
-			<% if current_user.nil? %>
-				<%= menu_item "Sign up", new_user_path, id: "menu-signup" %>
+			<% if @current_user.nil? %>
+				<%= menu_item "Sign up", new_users_path, id: "menu-signup" %>
 				<% menu_item do %>
-					<%= form_for :session, url: login_path, html: {class: "navbar-form pull-right"} do %>
+					<%= form_for :session, url: new_session_path, html: {class: "navbar-form pull-right"} do |f| %>
 						<%= f.text_field :username, placeholder: "username" %>
 						<%= f.password_field :password, placeholder: "password" %>
 						<%= f.submit "Login" %>
