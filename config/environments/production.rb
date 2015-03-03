@@ -9,7 +9,7 @@ Rails.application.configure do
 
   config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
-  config.action_mailer.perform_deliveries = true
+  config.action_mailer.perform_deliveries = false
 
   config.action_mailer.delivery_method = :smtp
 
