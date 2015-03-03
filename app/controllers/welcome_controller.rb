@@ -4,4 +4,7 @@ class WelcomeController < ApplicationController
 
   def contact
   end
+
+  def main
+  end
 end

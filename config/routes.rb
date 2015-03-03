@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   
   get 'users/show', as: 'show_users', to: 'users#show'
   get 'welcome/about', as: 'about', to: 'welcome#about'
+  get 'welcome/main', as: 'main', to: 'welcome#main'
   get 'welcome/contact'
 
-  root 'welcome#about'
+  root 'welcome#main'
 end
