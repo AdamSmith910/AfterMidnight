@@ -16,6 +16,7 @@ gem 'bootstrap_form',           '~> 2.2.0'
 gem "therubyracer",             '~> 0.12.1'
 gem "less-rails",               '~> 2.6.0'
 gem 'bcrypt',                   '~> 3.1.7'
+gem "figaro"
 
 
 group :development, :test do
