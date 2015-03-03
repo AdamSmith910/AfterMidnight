@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.2.0'
 gem 'rails', '4.2.0'
 gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
@@ -16,7 +17,8 @@ gem 'bootstrap_form',           '~> 2.2.0'
 gem "therubyracer",             '~> 0.12.1'
 gem "less-rails",               '~> 2.6.0'
 gem 'bcrypt',                   '~> 3.1.7'
-gem "figaro"
+gem 'figaro'
+gem 'rails_12factor', group: :production
 
 
 group :development, :test do
@@ -24,4 +26,3 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
-
