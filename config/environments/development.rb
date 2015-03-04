@@ -16,7 +16,7 @@ Rails.application.configure do
     :port      => 587, # ports 587 and 2525 are also supported with STARTTLS
     :enable_starttls_auto => true, # detects and uses STARTTLS
     :domain => "blogger.com",
-    :user_name => "adamsmith910@gmail.com",
+    :user_name => "adamsmith910@aol.com",
     :password  => "d2lc5OeF9MI7Kxew6FLt8A", # smtp password is any valid api key
     :authentication => 'plain' # Mandrill supports 'plain' or 'login'
   }
