@@ -18,6 +18,7 @@ gem "less-rails",               '~> 2.6.0'
 gem 'bcrypt',                   '~> 3.1.7'
 gem 'figaro'
 gem 'rails_12factor', group: :production
+gem 'omniauth-facebook'
 
 
 group :development, :test do
