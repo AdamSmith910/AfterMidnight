@@ -39,6 +39,11 @@ class UsersController < ApplicationController
   def user_params
   	params.require(:signup).permit(:email,
                                    :password,
-                                   :password_confirmation)
+                                   :password_confirmation,
+                                   :auth,
+                                   :name,
+                                   :oauth_token,
+                                   :oauth_token_expires_at,
+                                   :provider)
   end
 end
