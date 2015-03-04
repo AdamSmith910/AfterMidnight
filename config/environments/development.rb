@@ -17,7 +17,7 @@ Rails.application.configure do
     :enable_starttls_auto => true, # detects and uses STARTTLS
     :domain => "blogger.com",
     :user_name => "adamsmith910@aol.com",
-    :password  => "d2lc5OeF9MI7Kxew6FLt8A", # smtp password is any valid api key
+    :password  => "0BfC2bhwZHRI9Y2P8iMK_Q", # smtp password is any valid api key
     :authentication => 'plain' # Mandrill supports 'plain' or 'login'
   }
 
