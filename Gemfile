@@ -27,4 +27,5 @@ group :development, :test do
   gem 'sqlite3'
   gem 'capybara'
   gem 'rspec-rails', '~> 3.0'
+  gem 'factory_girl_rails'
 end
