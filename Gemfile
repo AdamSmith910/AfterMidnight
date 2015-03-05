@@ -23,6 +23,7 @@ gem 'unicorn-rails'
 gem 'mandrill-api'
 gem 'carrierwave'
 gem 'fog'
+gem 'faker'
 
 
 
