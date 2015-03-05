@@ -5,5 +5,5 @@ CarrierWave.configure do |config|
     :aws_secret_access_key  => ENV["aws_secret_access_key"],                   # required
     
   }
-  config.fog_directory  = "AfterMidnight"                        # required
+  config.fog_directory  = "AfterMidnight"                      # required
 end
