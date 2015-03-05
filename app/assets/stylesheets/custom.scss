@@ -8,6 +8,10 @@ body {
   font-size: 1.2em;
 }
 
+p {
+  color: red;
+}
+
 h1 {
   font-weight: bold;
   text-align: center;
@@ -84,6 +88,10 @@ h3 {
   margin-right: 10px;
   padding-bottom: -10px;
   margin-bottom: -10px;
+}
+
+table {
+  background-color: white;
 }
 
 td {

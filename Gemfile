@@ -24,6 +24,7 @@ gem 'mandrill-api'
 gem 'carrierwave'
 gem 'fog'
 gem 'faker'
+gem 'mini_magick'
 
 
 
