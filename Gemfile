@@ -19,7 +19,9 @@ gem 'bcrypt',                   '~> 3.1.7'
 gem 'figaro'
 gem 'rails_12factor', group: :production
 gem 'omniauth-facebook'
-gem "unicorn-rails"
+gem 'unicorn-rails'
+gem 'mandrill-api'
+
 
 
 group :development, :test do
