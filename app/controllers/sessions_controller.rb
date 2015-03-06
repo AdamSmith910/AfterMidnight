@@ -1,21 +1,14 @@
 class SessionsController < ApplicationController
   def create
-  	user = User.from_omniauth(env["omniauth.auth"])
+    auth = request.env["omniauth.auth"]
+    user = User.find_by_provider_and_uid(auth["provider"], auth["uid"]) || User.create_with_omniauth(auth)
     session[:user_id] = user.id
-    flash[:notice] = "Welcome #{user.name}"
-    redirect_to root_url
+    redirect_to root_url, :notice => "Signed in!"
   end
 
   def destroy
   	reset_session
   	flash[:notice] = "You have successfully logged out"
-  	redirect_to root_path
-  end
-
-  private
-
-  def invalid_login
-  	flash[:error] = "Invalid login"
   	redirect_to root_path
   end
 

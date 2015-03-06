@@ -19,6 +19,7 @@ gem 'bcrypt',                   '~> 3.1.7'
 gem 'figaro'
 gem 'rails_12factor', group: :production
 gem 'omniauth-facebook'
+gem 'omniauth-twitter'
 gem 'unicorn-rails'
 gem 'mandrill-api'
 gem 'carrierwave'
