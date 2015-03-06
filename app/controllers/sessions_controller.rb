@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
   def create
   	user = User.from_omniauth(env["omniauth.auth"])
     session[:user_id] = user.id
-    flash[:notice] = "Welcome"
+    flash[:notice] = "Welcome #{user.name}"
     redirect_to root_url
   end
 
@@ -14,26 +14,9 @@ class SessionsController < ApplicationController
 
   private
 
-  def authenticate_user(user)
-  	if user && user.authenticate(session_password)
-  		session[:user_id] = user.id
-  		flash[:notice] = "Welcome back #{user.email}"
-  		redirect_to root_path
-  	else
-  		invalid_login
-  	end
-  end
-
   def invalid_login
   	flash[:error] = "Invalid login"
   	redirect_to root_path
   end
 
-  def session_email
-  	params.require(:session).permit(:email)
-  end
-
-  def session_password
-  	params.require(:session).permit(:password)[:password]
-  end
 end
