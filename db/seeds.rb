@@ -6,13 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-@results = []
-n = 0
-
-10.times do
-  result = Search.new
-  result.name = Faker::Name.name
-  result.distance = n+1
-  result.open = true
-  @results << result
+10.times do 
+  Result.create!(
+    name: Faker::Company::name,
+    distance:  Faker::Number.number(1),
+    open:  true
+    )
 end
