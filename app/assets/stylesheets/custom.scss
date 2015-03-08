@@ -1,5 +1,5 @@
 body {
-  background-image: image-url("midnight_sky.png");
+  background-image: image-url("https://s3.amazonaws.com/aftermidnight/aftermidnightlogo.jpg");
   background-size: cover;
 }
 
@@ -7,6 +7,13 @@ body {
   background-color: black;
   color: white;
   font-size: 1.2em;
+
+  .brand {
+  margin-right: 10px;
+  padding-bottom: -10px;
+  margin-bottom: -10px;
+  background-color: black;
+  }
 }
 
 p {
@@ -77,18 +84,6 @@ h3 {
 .btn {
   color: gray;
   text-align: center;
-}
-
-.logo {
-  text-align: center;
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
-
-.brand {
-  margin-right: 10px;
-  padding-bottom: -10px;
-  margin-bottom: -10px;
 }
 
 table {
