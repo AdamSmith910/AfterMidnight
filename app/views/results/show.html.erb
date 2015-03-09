@@ -1,0 +1,18 @@
+            <h1>Still Open...</h1>
+
+<div class="container">
+  <table class="table table-bordered table-hover">
+    <tr>
+      <th class="text-left">Name</th>
+      <th class="text-left">Distance from you</th>
+    </tr>
+    <% @results.each do |result| %>
+      <tr>
+        <% if result.open == true %>
+          <td><%= result.name %></td>
+          <td><%= result.distance %> miles</td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+</div>

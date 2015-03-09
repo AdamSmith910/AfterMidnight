@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'results/index'
+  resources :results
+
+  get 'results/index', to: 'results#index', as: 'results_index'
 
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
@@ -16,5 +18,5 @@ Rails.application.routes.draw do
   get 'welcome/main', as: 'main', to: 'welcome#main'
   get 'welcome/contact'
 
-  root 'welcome#main'
+  root 'results#new'
 end
