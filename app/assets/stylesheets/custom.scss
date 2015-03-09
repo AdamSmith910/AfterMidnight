@@ -3,10 +3,11 @@ body {
   background-size: cover;
 }
 
-div {
-  .form-box {
-  background-color: white;
-  }
+.form-box {
+background-color: white;
+width: 40%;
+margin: 16px;
+padding: 10px;
 }
 
 .navbar {
@@ -81,7 +82,7 @@ h3 {
 }
 
 .btn {
-  color: gray;
+  color: black;
   text-align: center;
 }
 
