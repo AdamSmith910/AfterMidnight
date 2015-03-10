@@ -1,5 +1,5 @@
 body {
-  background-image: image-url("midnight_sky.png");
+  background-image: image-url("aftermidnightlogo.png");
   background-size: cover;
 }
 
@@ -17,17 +17,20 @@ padding: 10px;
 }
 
 p {
-  color: red;
+  color: black;
+  background: red;
 }
 
 h1 {
   font-weight: bold;
   text-align: center;
   color: red;
+  background: black;
 }
 
 h2 {
   color: red;
+  background: black;
 }
 
 #title {
