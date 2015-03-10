@@ -1,3 +1,8 @@
+body {
+  background-image: image-url("midnight_sky.png");
+  background-size: cover;
+}
+
 .form-box {
 background-color: white;
 width: 40%;
@@ -41,8 +46,6 @@ h3 {
   margin-top: 100px;
   margin-bottom: 100px;
   min-height: 70vh;
-  background-image: image-url("https://s3.amazonaws.com/aftermidnight/midnight_sky.png");
-  background-size: cover;
 }
 
 .main-title {
