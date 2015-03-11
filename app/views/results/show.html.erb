@@ -14,6 +14,14 @@
         <% if result.open == true %>
           <td><%= result.name %></td>
           <td><%= result.distance %> miles</td>
+          <td><%= result.closes_at %></td>
+          <td><iframe
+                width="200"
+                height="200"
+                frameborder="0" style="border:0"  
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAqeTLVAmIQLoohXsO25ULnKW_VX8I7bn4&q=<%=result.street.parameterize %>-<%= result.city.parameterize %>-<%= result.state.parameterize %>-<%= result.zip.parameterize %>">
+              </iframe>
+          </td>
         <% end %>
       </tr>
     <% end %>

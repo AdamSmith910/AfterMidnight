@@ -10,6 +10,11 @@
   Result.create!(
     name: Faker::Company::name,
     distance:  Faker::Number.number(1),
-    open:  true
+    open:  true,
+    closes_at:  Time.now,
+    street: "1600 Glenarm Place",
+    city: "Denver",
+    state: "CO",
+    zip: "80202"
     )
 end
