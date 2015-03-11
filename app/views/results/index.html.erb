@@ -9,7 +9,7 @@
       <th class="text-left">Map</th>
     </tr>
 
-    <% @results.sort_by { |result| (result[:distance] || 0) }.each do |result| %>
+    <% @results.sort_by { |result| result[:distance] }.each do |result| %>
       <tr>
         <% if result.open == true %>
           <td><%= result.name %></td>
