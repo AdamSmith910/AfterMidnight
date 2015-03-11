@@ -5,8 +5,11 @@
     <tr>
       <th class="text-left">Name</th>
       <th class="text-left">Distance from you</th>
+      <th class="text-left">Closes at</th>
+      <th class="text-left">Map</th>
     </tr>
-    <% @results.each do |result| %>
+
+    <% @results.sort_by { |result| (result[:distance] || 0) }.each do |result| %>
       <tr>
         <% if result.open == true %>
           <td><%= result.name %></td>
@@ -16,3 +19,4 @@
     <% end %>
   </table>
 </div>
+
