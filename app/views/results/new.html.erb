@@ -4,6 +4,7 @@
 <h2>Find something that's open</h2>
 
 <div class="form-box">
+  <div class="form-title">Where are you now?</div>
 <%= form_for(@result) do |f| %>
   <% if @result.errors.any? %>
     <div id="error_explanation" class="alert alert-danger" "alert-dismissable" >
@@ -36,7 +37,7 @@
 
   <div class="form-group">
     <%= f.label :zip %><br>
-    <%= f.text_field :zip, class="form-control", placeholder: "90210" %>
+    <%= f.text_field :zip, class: "form-control", placeholder: "90210" %>
   </div>
   
   <div class="actions">
