@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
 
   get 'searches/new'
+  get 'searches/show', to: 'searches#show', as: 'new_search'
 
   resources :results
-
-  get 'results/index', to: 'results#index', as: 'results_index'
 
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
@@ -20,5 +19,5 @@ Rails.application.routes.draw do
   get 'welcome/main', as: 'main', to: 'welcome#main'
   get 'welcome/contact'
 
-  root 'results#new'
+  root 'searches#new'
 end
