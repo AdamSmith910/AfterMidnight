@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'searches/new'
+
   resources :results
 
   get 'results/index', to: 'results#index', as: 'results_index'
