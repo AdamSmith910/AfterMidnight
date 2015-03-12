@@ -27,8 +27,6 @@ gem 'fog'
 gem 'faker'
 gem 'mini_magick'
 gem 'aws-sdk'
-gem 'omniauth-yelp'
-gem 'yelp', require: 'yelp'
 
 
 
