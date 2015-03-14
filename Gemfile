@@ -27,6 +27,7 @@ gem 'fog'
 gem 'faker'
 gem 'mini_magick'
 gem 'aws-sdk'
+gem 'google_places'
 
 
 

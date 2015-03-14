@@ -7,6 +7,7 @@ class SearchesController < ApplicationController
   end
 
   def show
-    @results = Result.all
+    @client = GooglePlaces::Client.new(ENV['GOOGLE_API'])
+    @client.spots()
   end
 end
