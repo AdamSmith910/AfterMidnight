@@ -5,25 +5,26 @@
     <tr>
       <th class="text-left">Name</th>
       <th class="text-left">Distance from you</th>
-      <th class="text-left">Closes at</th>
       <th class="text-left">Map</th>
     </tr>
+    <% @results.sort_by { |result| Geocoder::Calculations.distance_between(@coords, [result.lat, result.lng]) }.each do |result| %>
+        <% if result.opening_hours && result.opening_hours['open_now'] == true %>
 
-    <% @results.sort_by { |result| result[:distance] || 0 }.each do |result| %>
-      <tr>
-        <% if result.open == true %>
+   <tr>
           <td><%= result.name %></td>
-          <td><%= result.distance %> miles</td>
-          <td><%= result.closes_at %></td>
+          <td>
+          <%= Geocoder::Calculations.distance_between(@coords, [result.lat,result.lng]).round(2) %> miles
+          </td>
           <td><iframe
                 width="200"
                 height="200"
                 frameborder="0" style="border:0"  
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAqeTLVAmIQLoohXsO25ULnKW_VX8I7bn4&q=<%=result.street.parameterize %>-<%= result.city.parameterize %>-<%= result.state.parameterize %>-<%= result.zip.parameterize %>">
+                src="https://www.google.com/maps/embed/v1/view?key=AIzaSyAqeTLVAmIQLoohXsO25ULnKW_VX8I7bn4&center=<%=result.lat%>,<%=result.lng%>&zoom=18">
               </iframe>
           </td>
-        <% end %>
       </tr>
+        <% end %>
+
     <% end %>
   </table>
 </div>
