@@ -1,31 +1,22 @@
           <h1>Still Open...</h1>
 
-<div class="container">
-  <table class="table table-bordered table-hover">
-    <tr>
-      <th class="text-left">Name</th>
-      <th class="text-left">Distance from you</th>
-      <th class="text-left">Map</th>
-    </tr>
+<div class="thumbnails">
+  <li class="span4">
     <% @results.sort_by { |result| Geocoder::Calculations.distance_between(@coords, [result.lat, result.lng]) }.each do |result| %>
-        <% if result.opening_hours && result.opening_hours['open_now'] == true %>
-
-   <tr>
-          <td><%= result.name %></td>
-          <td>
-          <%= Geocoder::Calculations.distance_between(@coords, [result.lat,result.lng]).round(2) %> miles
-          </td>
-          <td><iframe
-                width="200"
-                height="200"
-                frameborder="0" style="border:0"  
-                src="https://www.google.com/maps/embed/v1/view?key=AIzaSyAqeTLVAmIQLoohXsO25ULnKW_VX8I7bn4&center=<%=result.lat%>,<%=result.lng%>&zoom=18">
-              </iframe>
-          </td>
-      </tr>
+      <% if result.opening_hours && result.opening_hours['open_now'] == true %>
+      <div class="thumbail">
+        <iframe
+              width="200"
+              height="200"
+              frameborder="0" style="border:0"  
+              src="https://www.google.com/maps/embed/v1/view?key=AIzaSyAqeTLVAmIQLoohXsO25ULnKW_VX8I7bn4&center=<%=result.lat%>,<%=result.lng%>&zoom=18">
+          </iframe>
+          <h3><%= result.name %></h3>
+          <p><%= Geocoder::Calculations.distance_between(@coords, [result.lat,result.lng]).round(2) %> miles</p>
         <% end %>
-
-    <% end %>
-  </table>
+      <% end %>
+    </div>
+  </li>
 </div>
+
 
